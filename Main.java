@@ -1,4 +1,9 @@
 import java.util.Arrays;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 
 public class Main {
 
@@ -7,5 +12,4 @@ public class Main {
 		System.out.println(mainMenu.getSelection() + "foi selecionada");
 		System.out.println("Fim");
 	}
-
 }
