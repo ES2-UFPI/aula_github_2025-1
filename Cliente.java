@@ -91,7 +91,8 @@ public class Cliente {
         System.out.println("Conta desbloqueada.");
     }
 
-    public boolean isBloqueada() {
+    public boolean isBloqueada() 
+    {
         return bloqueada;
     }
 }
