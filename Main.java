@@ -14,7 +14,7 @@ public class Main {
                     System.out.println("Conta foi selecionada");
                     break;
                 case 2:
-                    handleCliente();
+                    mainMenu.handleClienteMenu();
                     break;
                 case 3:
                     System.out.println("Operacoes foi selecionada");
@@ -28,19 +28,5 @@ public class Main {
         } while (selection != 4);
 
         System.out.println("Fim");
-    }
-
-    private static void handleCliente() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Menu Cliente:");
-        System.out.print("Digite o nome do cliente: ");
-        String nome = scanner.nextLine();
-        System.out.print("Digite o CPF do cliente: ");
-        String cpf = scanner.nextLine();
-        System.out.print("Digite o endereço do cliente: ");
-        String endereco = scanner.nextLine();
-
-        Cliente cliente = new Cliente(nome, cpf, endereco);
-        System.out.println("Cliente criado com sucesso: " + cliente);
     }
 }

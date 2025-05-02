@@ -10,7 +10,7 @@ public class Menu {
         this.options = options;
     }
 
-    public String getSelection() {
+    public int getSelection() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(title);
         for (int i = 0; i < options.size(); i++) {
@@ -21,17 +21,14 @@ public class Menu {
         scanner.nextLine(); // Consume newline
 
         if (choice > 0 && choice <= options.size()) {
-            String selectedOption = options.get(choice - 1);
-            if (selectedOption.equalsIgnoreCase("Cliente")) {
-                handleClienteMenu();
-            }
-            return selectedOption;
+            return choice;
         } else {
-            return "Opção inválida";
+            System.out.println("Opção inválida");
+            return -1;
         }
     }
 
-    private void handleClienteMenu() {
+    public void handleClienteMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Menu Cliente:");
         System.out.print("Digite o nome do cliente: ");
