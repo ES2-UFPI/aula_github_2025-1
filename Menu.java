@@ -28,7 +28,6 @@ public class Menu {
         }
     }
 
-<<<<<<< HEAD
     public void handleClienteMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Menu Cliente:");
@@ -43,32 +42,3 @@ public class Menu {
         System.out.println("Cliente criado com sucesso: " + cliente);
     }
 }
-=======
-			System.out.println("Informe a opcao desejada. ");
-			Scanner s = new Scanner(System.in);
-			String str = s.nextLine();
-			try {
-				op = Integer.parseInt(str);
-			}
-			catch (NumberFormatException e) {
-				op = 0;
-			}
-			if (op>=i){
-				System.out.println("Opcao errada!");
-				op=0;
-			}
-			if (op == 2){
-				Scanner scanner = new Scanner(System.in);
-				System.out.print("Nome do cliente: ");
-				String nome = scanner.nextLine();
-				System.out.print("Email do cliente: ");
-				String email = scanner.nextLine();
-				System.out.println("\nCliente com o nome"+ nome +" e com o email "+ email +" cadastrado com sucesso\n");
-				op = 0;
-			}
-
-		}
-		return op;
-	}
-}
->>>>>>> a6377529addaec742d04499e2aa5d8d534f297bb
