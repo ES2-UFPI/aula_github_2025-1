@@ -1,31 +1,49 @@
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-	private String title;
-	private List<String> options;
+    private String title;
+    private List<String> options;
 
-	public Menu(List<String> options) {
-		this.title = "Menu";
-		this.options = options;
-	}
+    public Menu(String title, List<String> options) {
+        this.title = title;
+        this.options = options;
+    }
 
-	public Menu(String title, List<String> options) {
-		this.title = title;
-		this.options = options;
-	}
+    public int getSelection() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(title);
+        for (int i = 0; i < options.size(); i++) {
+            System.out.println((i + 1) + ". " + options.get(i));
+        }
+        System.out.print("Escolha uma opção: ");
+        int choice = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
 
-	public int getSelection() {
-		int op = 0;
-		while (op==0){
-			System.out.println(title+"\n");
-			int i=1;
-			for (String option : options) {
-				System.out.println(i++ + " - " + option);
-			}
+        if (choice > 0 && choice <= options.size()) {
+            return choice;
+        } else {
+            System.out.println("Opção inválida");
+            return -1;
+        }
+    }
 
+<<<<<<< HEAD
+    public void handleClienteMenu() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Menu Cliente:");
+        System.out.print("Digite o nome do cliente: ");
+        String nome = scanner.nextLine();
+        System.out.print("Digite o CPF do cliente: ");
+        String cpf = scanner.nextLine();
+        System.out.print("Digite o endereço do cliente: ");
+        String endereco = scanner.nextLine();
+
+        Cliente cliente = new Cliente(nome, cpf, endereco);
+        System.out.println("Cliente criado com sucesso: " + cliente);
+    }
+}
+=======
 			System.out.println("Informe a opcao desejada. ");
 			Scanner s = new Scanner(System.in);
 			String str = s.nextLine();
@@ -53,3 +71,4 @@ public class Menu {
 		return op;
 	}
 }
+>>>>>>> a6377529addaec742d04499e2aa5d8d534f297bb
