@@ -40,5 +40,6 @@ public class Menu {
 
         Cliente cliente = new Cliente(nome, cpf, endereco);
         System.out.println("Cliente criado com sucesso: " + cliente);
+        scanner.close();
     }
 }
